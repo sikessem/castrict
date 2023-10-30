@@ -1,14 +1,13 @@
 {
     "type": "project",
-    "name": "sikessem/skeleton",
-    "description": "📦️ Sikessem library builder template.",
-    "homepage": "https://packagist.com/packages/sikessem/skeleton",
+    "name": "sikessem/values",
+    "description": "Objects with strict types to manage PHP variables and values.",
+    "homepage": "https://packagist.com/packages/sikessem/values",
     "license": "MIT",
     "keywords": [
+        "php",
         "sikessem",
-        "package-skeleton",
-        "repository-template",
-        "php"
+        "values"
     ],
     "authors": [
         {
@@ -18,30 +17,31 @@
         }
     ],
     "support": {
-        "source": "https://github.com/sikessem/skeleton",
-        "issues": "https://github.com/sikessem/skeleton/issues",
+        "source": "https://github.com/sikessem/values",
+        "issues": "https://github.com/sikessem/values/issues",
         "chat": "https://github.com/orgs/sikessem/discussions"
     },
     "require": {
         "php": "^8.1|^8.2"
     },
     "require-dev": {
-        "sikessem/devtools": "^0.0"
+        "sikessem/devtools": "^0.4.0"
     },
     "autoload": {
         "psr-4": {
-            "Sikessem\\Skeleton\\": "src/"
+            "Sikessem\\Values\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sikessem\\Skeleton\\Tests\\": "tests/"
+            "Sikessem\\Values\\Tests\\": "tests/"
         }
     },
     "scripts": {
         "analyse": "phpstan analyse --ansi --memory-limit=-1 --debug",
         "check": "pint --test -v",
         "debug": [
+            "@validate",
             "@check",
             "@analyse",
             "@inspect",
@@ -55,6 +55,7 @@
         ],
         "fix": [
             "@refactor",
+            "@sanitize",
             "@format",
             "@lint"
         ],
@@ -63,7 +64,9 @@
         "lint": "pint -v",
         "test": "pest --colors=always",
         "review": "rector --dry-run --debug",
-        "refactor": "rector"
+        "refactor": "rector",
+        "sanitize": "phpinsights fix",
+        "validate": "phpinsights analyse"
     },
     "extra": {
         "branch-alias": {
@@ -75,7 +78,8 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
     "minimum-stability": "stable",

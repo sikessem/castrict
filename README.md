@@ -18,16 +18,16 @@
 [sikessem-link]: https://github.com/sikessem "Sikessem"
 
 [php-icon]: https://img.shields.io/badge/PHP-ccc.svg?style=flat&logo=php
-[php-link]: https://github.com/sikessem/skeleton/search?l=php "PHP code"
+[php-link]: https://github.com/sikessem/values/search?l=php "PHP code"
 
-[packagist-version-icon]: https://img.shields.io/packagist/v/sikessem/skeleton
-[packagist-version-link]: https://packagist.org/packages/sikessem/skeleton "Skeleton Releases"
+[packagist-version-icon]: https://img.shields.io/packagist/v/sikessem/values
+[packagist-version-link]: https://packagist.org/packages/sikessem/values "Values Releases"
 
-[packagist-download-icon]: https://img.shields.io/packagist/dt/sikessem/skeleton
-[packagist-download-link]: https://packagist.org/packages/sikessem/skeleton "Skeleton Downloads"
+[packagist-download-icon]: https://img.shields.io/packagist/dt/sikessem/values
+[packagist-download-link]: https://packagist.org/packages/sikessem/values "Values Downloads"
 
-[actions-icon]: https://github.com/sikessem/skeleton/workflows/CI/badge.svg
-[actions-link]: https://github.com/sikessem/skeleton/actions "Skeleton status"
+[actions-icon]: https://github.com/sikessem/values/workflows/CI/badge.svg
+[actions-link]: https://github.com/sikessem/values/actions "Values status"
 
 [pr-icon]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=brightgreen
 [pr-link]: https://github.com/sikessem/.github/blob/HEAD/CONTRIBUTING.md "PRs welcome!"
@@ -36,20 +36,20 @@
 [twitter-link]: https://twitter.com/intent/follow?screen_name=sikessem_tweets "Ping Sikessem"
 
 [license-icon]: https://img.shields.io/badge/license-MIT-blue.svg
-[license-link]: https://github.com/sikessem/skeleton/blob/HEAD/LICENSE "Skeleton License"
-[conduct-link]: https://github.com/sikessem/skeleton/blob/HEAD/CODE_OF_CONDUCT.md
+[license-link]: https://github.com/sikessem/values/blob/HEAD/LICENSE "Values License"
+[conduct-link]: https://github.com/sikessem/values/blob/HEAD/CODE_OF_CONDUCT.md
 [discuss-link]: https://github.com/orgs/sikessem/discussions
-[docs-link]: https://github.com/sikessem/skeleton#readme "Skeleton Documentation"
+[docs-link]: https://github.com/sikessem/values#readme "Values Documentation"
 
 ***
 
-# 📦️ Sikessem Skeleton
+# PHP Value Objects
 
-Create a new [Sikessem][sikessem-link] project based on this template.
+Objects with strict types to manage PHP variables and values.
 
 ## 🔖 Contents
 
-- [📦️ Sikessem Skeleton](#️-sikessem-skeleton)
+- [PHP Value Objects](#php-value-objects)
   - [🔖 Contents](#-contents)
   - [📋 Requirements](#-requirements)
   - [🎉 Getting Started](#-getting-started)
@@ -74,10 +74,10 @@ Create a new [Sikessem][sikessem-link] project based on this template.
 
 ### ⚡️ Installation
 
-[Use this template](https://github.com/sikessem/skeleton/generate) or create a new [Sikessem][sikessem-link] library via the [Composer](https://getcomposer.org/) `create-project` command (recommended):
+Use [Composer](https://getcomposer.org/) to install `sikessem/values`:
 
 ```bash
-composer create-project sikessem/skeleton --prefer-source my-lib
+composer require sikessem/values
 ```
 
 ### 🧑‍💻 Usage
@@ -85,13 +85,11 @@ composer create-project sikessem/skeleton --prefer-source my-lib
 ```php
 <?php
 
-use Sikessem\Skeleton\Program;
+use Sikessem\Values\Value;
 
-$vendor_dir = __DIR__.'/vendor'; // Replace it by your vendor directory
-
-include_once $vendor_dir.'/autoload.php';
-
-Program::main(); // Print "Hello World!"
+$two = Value::from(2); // 2
+$two->update(fn($val) => $val * $val); // 4
+$two->set(5); // 5
 ```
 
 ### 🧪 Testing and debugging
@@ -136,7 +134,7 @@ composer fix
 
 ## 📖 Documentation
 
-The full documentation for the Sikessem Skeleton can be found on [this address][docs-link].
+The full documentation for the Sikessem Values can be found on [this address][docs-link].
 
 ## 👏 Contribution
 
@@ -155,7 +153,7 @@ Read our [**Contributing Guide**][pr-link] to learn about our development proces
 
 We have a list of [good first issues][gfi] that contain bugs which have a relatively limited scope. This is a great place to get started, gain experience, and get familiar with our contribution process.
 
-[gfi]: https://github.com/sikessem/skeleton/labels/good%20first%20issue
+[gfi]: https://github.com/sikessem/values/labels/good%20first%20issue
 
 ### 💬 Discussions
 
@@ -167,7 +165,7 @@ If you discover a security vulnerability within [Sikessem][sikessem-link], pleas
 
 ## 📄 License
 
-The Sikessem Skeleton is open-sourced software licensed under the  [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE][license-link] file for details.
+The Sikessem Values is open-sourced software licensed under the  [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE][license-link] file for details.
 
 ***
 
