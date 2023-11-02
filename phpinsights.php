@@ -35,6 +35,8 @@ return [
     'exclude' => [
     ],
 
+    'ide' => 'vscode',
+
     'add' => [
         \NunoMaduro\PhpInsights\Domain\Metrics\Code\Comments::class => [
             \PhpCsFixer\Fixer\Phpdoc\PhpdocSummaryFixer::class,
