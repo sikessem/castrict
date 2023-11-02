@@ -44,6 +44,7 @@ return [
     ],
 
     'remove' => [
+        \NunoMaduro\PhpInsights\Domain\Insights\ForbiddenTraits::class,
     ],
 
     'config' => [
