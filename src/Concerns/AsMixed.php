@@ -8,6 +8,8 @@ use Sikessem\Values\Contracts\MixedType;
 
 trait AsMixed
 {
+    abstract public function get(): mixed;
+
     public static function from(mixed $value): self
     {
         if ($value instanceof static) {

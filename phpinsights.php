@@ -48,6 +48,7 @@ return [
         \NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses::class,
         \SlevomatCodingStandard\Sniffs\TypeHints\DisallowMixedTypeHintSniff::class,
         \SlevomatCodingStandard\Sniffs\Commenting\InlineDocCommentDeclarationSniff::class,
+        \NunoMaduro\PhpInsights\Domain\Insights\CyclomaticComplexityIsHigh::class,
     ],
 
     'config' => [

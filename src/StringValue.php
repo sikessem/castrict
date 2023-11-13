@@ -16,11 +16,6 @@ class StringValue implements StringType
         $this->value = $value;
     }
 
-    public function __toString(): string
-    {
-        return $this->get();
-    }
-
     public function get(): string
     {
         return $this->value;

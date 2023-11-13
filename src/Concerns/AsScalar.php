@@ -10,11 +10,23 @@ trait AsScalar
 {
     use AsMixed;
 
+    public function __toString(): string
+    {
+        /** @psalm-suppress RedundantCast */
+        return (string) $this->get();
+    }
+
+    abstract public function get(): bool|int|float|string;
+
     /**
      * @throws \InvalidArgumentException If the value is not a scalar.
      */
     public static function from(mixed $value): self
     {
+        if ($value instanceof static) {
+            return $value;
+        }
+
         if ($value instanceof MixedType) {
             /** @var mixed $value */
             $value = $value->get();

@@ -6,12 +6,14 @@ namespace Sikessem\Values\Concerns;
 
 use Sikessem\Values\Contracts\ScalarType;
 
-trait AsString
+trait AsNumeric
 {
     use AsScalar;
 
+    abstract public function get(): int|float|string;
+
     /**
-     * @throws \InvalidArgumentException If the value is not a string.
+     * @throws \InvalidArgumentException If the value is not numeric.
      */
     public static function from(mixed $value): self
     {
@@ -23,12 +25,12 @@ trait AsString
             $value = (string) $value->get();
         }
 
-        if (is_string($value)) {
+        if (is_numeric($value)) {
             return new self($value);
         }
 
         throw new \InvalidArgumentException(sprintf(
-            'Value "%s" is not a string.',
+            'Value "%s" is not numeric.',
             get_debug_type($value),
         ));
     }

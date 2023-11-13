@@ -16,11 +16,6 @@ class ScalarValue implements ScalarType
         $this->value = $value;
     }
 
-    public function __toString(): string
-    {
-        return (string) $this->get();
-    }
-
     public function get(): bool|int|float|string
     {
         return $this->value;
