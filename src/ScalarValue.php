@@ -7,7 +7,7 @@ namespace Sikessem\Values;
 use Sikessem\Values\Concerns\AsScalar;
 use Sikessem\Values\Contracts\ScalarType;
 
-class ScalarValue implements \Stringable, ScalarType
+class ScalarValue implements ScalarType
 {
     use AsScalar;
 
