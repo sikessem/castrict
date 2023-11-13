@@ -47,6 +47,7 @@ return [
         \NunoMaduro\PhpInsights\Domain\Insights\ForbiddenTraits::class,
         \NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses::class,
         \SlevomatCodingStandard\Sniffs\TypeHints\DisallowMixedTypeHintSniff::class,
+        \SlevomatCodingStandard\Sniffs\Commenting\InlineDocCommentDeclarationSniff::class,
     ],
 
     'config' => [
