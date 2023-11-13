@@ -8,6 +8,8 @@ use Closure;
 
 interface IsMixedValue
 {
+    public const DEFAULT_VALUE = null;
+
     public function get(): mixed;
 
     public function set(mixed $value): static;

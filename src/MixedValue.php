@@ -9,9 +9,9 @@ use Sikessem\Values\Contracts\IsMixedValue;
 
 class MixedValue implements IsMixedValue
 {
-    protected mixed $value;
+    protected mixed $value = self::DEFAULT_VALUE;
 
-    public function __construct(mixed $value)
+    public function __construct(mixed $value = self::DEFAULT_VALUE)
     {
         $this->set($value);
     }
