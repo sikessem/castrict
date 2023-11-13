@@ -67,7 +67,7 @@ Objects with strict types to manage PHP variables and values.
 
 ## 📋 Requirements
 
-> - **Requires [PHP 8.1+](https://php.net/releases/)** (at least 8.1.19 recommended to avoid potential bugs).
+> - **Requires [PHP >=8.0](https://php.net/releases/)** (at least 8.0.30 recommended to avoid potential bugs).
 > - **Requires [Composer v2+](https://getcomposer.org/)** to manage PHP dependencies.
 
 ## 🎉 Getting Started
