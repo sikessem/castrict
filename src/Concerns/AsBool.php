@@ -34,4 +34,44 @@ trait AsBool
             get_debug_type($value),
         ));
     }
+
+    public function isTrue(): bool
+    {
+        return $this->get();
+    }
+
+    public function isFalse(): bool
+    {
+        return ! $this->get();
+    }
+
+    public function toTrue(): self
+    {
+        return static::from(true);
+    }
+
+    public function toFalse(): self
+    {
+        return static::from(false);
+    }
+
+    public static function isTruthy(bool $value): bool
+    {
+        return static::from($value)->isTrue();
+    }
+
+    public static function isFalsy(bool $value): bool
+    {
+        return static::from($value)->isFalse();
+    }
+
+    public static function truthify(mixed $value): self
+    {
+        return static::from($value)->toTrue();
+    }
+
+    public static function falsify(mixed $value): self
+    {
+        return static::from($value)->toFalse();
+    }
 }
