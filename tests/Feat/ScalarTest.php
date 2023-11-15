@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 use Sikessem\Values\Contracts\MixedType;
 use Sikessem\Values\Contracts\ScalarType;
+use Sikessem\Values\Conversion;
 use Sikessem\Values\ScalarValue;
 
 beforeEach(function () {
-    $this->scalar = ScalarValue::from('Hello World');
+    $this->scalar = Conversion::toScalar('Hello World');
 });
 
 it('should be instantiable', function () {

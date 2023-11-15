@@ -5,9 +5,10 @@ declare(strict_types=1);
 use Sikessem\Values\BoolValue;
 use Sikessem\Values\Contracts\BoolType;
 use Sikessem\Values\Contracts\ScalarType;
+use Sikessem\Values\Conversion;
 
 beforeEach(function () {
-    $this->bool = BoolValue::from(true);
+    $this->bool = Conversion::toBool(true);
 });
 
 it('should be instantiable', function () {

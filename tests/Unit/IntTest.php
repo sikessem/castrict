@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 use Sikessem\Values\Contracts\IntType;
 use Sikessem\Values\Contracts\NumberType;
+use Sikessem\Values\Conversion;
 use Sikessem\Values\IntValue;
 
 beforeEach(function () {
-    $this->int = IntValue::from(42);
+    $this->int = Conversion::toInt(42);
 });
 
 it('should be instantiable', function () {

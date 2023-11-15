@@ -10,7 +10,7 @@ trait AsMixed
 {
     abstract public function get(): mixed;
 
-    public static function from(mixed $value): self
+    public static function of(mixed $value): self
     {
         if ($value instanceof static) {
             return $value;
@@ -29,6 +29,6 @@ trait AsMixed
      */
     public function to(string $type): MixedType
     {
-        return $type::from($this->get());
+        return $type::of($this->get());
     }
 }

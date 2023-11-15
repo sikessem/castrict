@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 use Sikessem\Values\Contracts\FloatType;
 use Sikessem\Values\Contracts\NumberType;
+use Sikessem\Values\Conversion;
 use Sikessem\Values\FloatValue;
 
 beforeEach(function () {
-    $this->float = FloatValue::from(84.21);
+    $this->float = Conversion::toFloat(84.21);
 });
 
 it('should be instantiable', function () {

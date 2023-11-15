@@ -15,7 +15,7 @@ trait AsBool
     /**
      * @throws \InvalidArgumentException If the value is not a boolean.
      */
-    public static function from(mixed $value): self
+    public static function of(mixed $value): self
     {
         if ($value instanceof static) {
             return $value;
@@ -47,31 +47,31 @@ trait AsBool
 
     public function toTrue(): self
     {
-        return static::from(true);
+        return static::of(true);
     }
 
     public function toFalse(): self
     {
-        return static::from(false);
+        return static::of(false);
     }
 
     public static function isTruthy(bool $value): bool
     {
-        return static::from($value)->isTrue();
+        return static::of($value)->isTrue();
     }
 
     public static function isFalsy(bool $value): bool
     {
-        return static::from($value)->isFalse();
+        return static::of($value)->isFalse();
     }
 
     public static function truthify(mixed $value): self
     {
-        return static::from($value)->toTrue();
+        return static::of($value)->toTrue();
     }
 
     public static function falsify(mixed $value): self
     {
-        return static::from($value)->toFalse();
+        return static::of($value)->toFalse();
     }
 }

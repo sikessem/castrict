@@ -15,7 +15,7 @@ trait AsFloat
     /**
      * @throws \InvalidArgumentException If the value is not a float.
      */
-    public static function from(mixed $value): self
+    public static function of(mixed $value): self
     {
         if ($value instanceof static) {
             return $value;

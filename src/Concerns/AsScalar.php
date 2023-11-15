@@ -21,7 +21,7 @@ trait AsScalar
     /**
      * @throws \InvalidArgumentException If the value is not a scalar.
      */
-    public static function from(mixed $value): self
+    public static function of(mixed $value): self
     {
         if ($value instanceof static) {
             return $value;

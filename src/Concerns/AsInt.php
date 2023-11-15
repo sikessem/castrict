@@ -15,7 +15,7 @@ trait AsInt
     /**
      * @throws \InvalidArgumentException If the value is not an integer.
      */
-    public static function from(mixed $value): self
+    public static function of(mixed $value): self
     {
         if ($value instanceof static) {
             return $value;

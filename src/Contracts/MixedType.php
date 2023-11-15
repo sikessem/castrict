@@ -8,10 +8,5 @@ interface MixedType
 {
     public function get(): mixed;
 
-    public static function from(mixed $value): self;
-
-    /**
-     * @param  class-string<MixedType>  $type
-     */
-    public function to(string $type): MixedType;
+    public static function of(mixed $value): self;
 }

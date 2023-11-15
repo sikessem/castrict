@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 use Sikessem\Values\Contracts\NumberType;
 use Sikessem\Values\Contracts\NumericType;
+use Sikessem\Values\Conversion;
 use Sikessem\Values\NumberValue;
 
 beforeEach(function () {
-    $this->number = NumberValue::from(84.21);
+    $this->number = Conversion::toNumber(84.21);
 });
 
 it('should be instantiable', function () {

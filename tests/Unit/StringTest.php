@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 use Sikessem\Values\Contracts\ScalarType;
 use Sikessem\Values\Contracts\StringType;
+use Sikessem\Values\Conversion;
 use Sikessem\Values\StringValue;
 
 beforeEach(function () {
-    $this->string = StringValue::from('Hello World');
+    $this->string = Conversion::toString('Hello World');
 });
 
 it('should be instantiable', function () {
