@@ -25,6 +25,7 @@
         "php": ">=8.0"
     },
     "require-dev": {
+        "php": "^8.1||^8.2",
         "sikessem/devtools": "^0.4.0"
     },
     "autoload": {
