@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\BoolValue;
 use Sikessem\Values\Cast;
+use Sikessem\Values\Objects\BoolObject;
 use Sikessem\Values\Types\BoolType;
 use Sikessem\Values\Types\ScalarType;
 
@@ -12,7 +12,7 @@ beforeEach(function () {
 });
 
 it('should be instantiable', function () {
-    expect($this->bool)->toBeInstanceOf(BoolValue::class);
+    expect($this->bool)->toBeInstanceOf(BoolObject::class);
 });
 
 it('should be an instance of BoolType', function () {

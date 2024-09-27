@@ -16,11 +16,10 @@ test('abstract classes')
     ->toBeAbstract()
     ->toHavePrefix('Abstract');
 
-test('base classes')
-    ->expect('Sikessem\Values\Bases')
+test('objects')
+    ->expect('Sikessem\Values\Objects')
     ->classes()
-    ->toBeAbstract()
-    ->toHavePrefix('Base')
+    ->toHaveSuffix('Object')
     ->toHaveConstructor();
 
 test('types')

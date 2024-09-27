@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Sikessem\Values;
+namespace Sikessem\Values\Objects;
 
 use Sikessem\Values\Concerns\AsNumber;
 use Sikessem\Values\Types\NumberType;
 
-class NumberValue implements NumberType
+class NumberObject implements NumberType
 {
     use AsNumber;
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Sikessem\Values;
+namespace Sikessem\Values\Objects;
 
 use Sikessem\Values\Concerns\AsNumeric;
 use Sikessem\Values\Types\NumericType;
 
-class NumericValue implements NumericType
+class NumericObject implements NumericType
 {
     use AsNumeric;
 

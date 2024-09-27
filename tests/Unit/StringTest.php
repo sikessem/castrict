@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Sikessem\Values\Cast;
-use Sikessem\Values\StringValue;
+use Sikessem\Values\Objects\StringObject;
 use Sikessem\Values\Types\ScalarType;
 use Sikessem\Values\Types\StringType;
 
@@ -12,7 +12,7 @@ beforeEach(function () {
 });
 
 it('should be instantiable', function () {
-    expect($this->string)->toBeInstanceOf(StringValue::class);
+    expect($this->string)->toBeInstanceOf(StringObject::class);
 });
 
 it('should be an instance of StringType', function () {

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Sikessem\Values\Cast;
-use Sikessem\Values\IntValue;
+use Sikessem\Values\Objects\IntObject;
 use Sikessem\Values\Types\IntType;
 use Sikessem\Values\Types\NumberType;
 
@@ -12,7 +12,7 @@ beforeEach(function () {
 });
 
 it('should be instantiable', function () {
-    expect($this->int)->toBeInstanceOf(IntValue::class);
+    expect($this->int)->toBeInstanceOf(IntObject::class);
 });
 
 it('should be an instance of IntType', function () {

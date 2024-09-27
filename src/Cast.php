@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace Sikessem\Values;
 
+use Sikessem\Values\Objects\BoolObject;
+use Sikessem\Values\Objects\FloatObject;
+use Sikessem\Values\Objects\IntObject;
+use Sikessem\Values\Objects\MixedObject;
+use Sikessem\Values\Objects\NumberObject;
+use Sikessem\Values\Objects\NumericObject;
+use Sikessem\Values\Objects\ScalarObject;
+use Sikessem\Values\Objects\StringObject;
 use Sikessem\Values\Types\BoolType;
 use Sikessem\Values\Types\FloatType;
 use Sikessem\Values\Types\IntType;
@@ -24,42 +32,42 @@ class Cast
 
     public function intoBool(): BoolType
     {
-        return BoolValue::of($this->value);
+        return BoolObject::of($this->value);
     }
 
     public function intoInt(): IntType
     {
-        return IntValue::of($this->value);
+        return IntObject::of($this->value);
     }
 
     public function intoFloat(): FloatType
     {
-        return FloatValue::of($this->value);
+        return FloatObject::of($this->value);
     }
 
     public function intoString(): StringType
     {
-        return StringValue::of($this->value);
+        return StringObject::of($this->value);
     }
 
     public function intoNumber(): NumberType
     {
-        return NumberValue::of($this->value);
+        return NumberObject::of($this->value);
     }
 
     public function intoNumeric(): NumericType
     {
-        return NumericValue::of($this->value);
+        return NumericObject::of($this->value);
     }
 
     public function intoScalar(): ScalarType
     {
-        return ScalarValue::of($this->value);
+        return ScalarObject::of($this->value);
     }
 
     public function intoMixed(): MixedType
     {
-        return MixedValue::of($this->value);
+        return MixedObject::of($this->value);
     }
 
     public static function toBool(mixed $value): BoolType

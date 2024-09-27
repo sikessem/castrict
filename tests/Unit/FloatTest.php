@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Sikessem\Values\Cast;
-use Sikessem\Values\FloatValue;
+use Sikessem\Values\Objects\FloatObject;
 use Sikessem\Values\Types\FloatType;
 use Sikessem\Values\Types\NumberType;
 
@@ -12,7 +12,7 @@ beforeEach(function () {
 });
 
 it('should be instantiable', function () {
-    expect($this->float)->toBeInstanceOf(FloatValue::class);
+    expect($this->float)->toBeInstanceOf(FloatObject::class);
 });
 
 it('should be an instance of FloatType', function () {

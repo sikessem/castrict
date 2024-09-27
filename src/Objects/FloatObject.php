@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Sikessem\Values;
+namespace Sikessem\Values\Objects;
 
 use Sikessem\Values\Concerns\AsFloat;
 use Sikessem\Values\Types\FloatType;
 
-class FloatValue implements FloatType
+class FloatObject implements FloatType
 {
     use AsFloat;
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Sikessem\Values;
+namespace Sikessem\Values\Objects;
 
 use Sikessem\Values\Concerns\AsInt;
 use Sikessem\Values\Types\IntType;
 
-class IntValue implements IntType
+class IntObject implements IntType
 {
     use AsInt;
 

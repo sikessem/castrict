@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Sikessem\Values\Cast;
-use Sikessem\Values\ScalarValue;
+use Sikessem\Values\Objects\ScalarObject;
 use Sikessem\Values\Types\MixedType;
 use Sikessem\Values\Types\ScalarType;
 
@@ -12,7 +12,7 @@ beforeEach(function () {
 });
 
 it('should be instantiable', function () {
-    expect($this->scalar)->toBeInstanceOf(ScalarValue::class);
+    expect($this->scalar)->toBeInstanceOf(ScalarObject::class);
 });
 
 it('should be an instance of ScalarType', function () {

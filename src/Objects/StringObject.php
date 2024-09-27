@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Sikessem\Values;
+namespace Sikessem\Values\Objects;
 
 use Sikessem\Values\Concerns\AsString;
 use Sikessem\Values\Types\StringType;
 
-class StringValue implements StringType
+class StringObject implements StringType
 {
     use AsString;
 
