@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\Types\FloatType;
-use Sikessem\Values\Types\NumberType;
 use Sikessem\Values\Conversion;
 use Sikessem\Values\FloatValue;
+use Sikessem\Values\Types\FloatType;
+use Sikessem\Values\Types\NumberType;
 
 beforeEach(function () {
     $this->float = Conversion::toFloat(84.21);

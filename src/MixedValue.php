@@ -11,9 +11,7 @@ class MixedValue implements MixedType
 {
     use AsMixed;
 
-    public function __construct(protected mixed $value)
-    {
-    }
+    public function __construct(protected mixed $value) {}
 
     public function get(): mixed
     {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\Types\NumericType;
-use Sikessem\Values\Types\ScalarType;
 use Sikessem\Values\Conversion;
 use Sikessem\Values\NumericValue;
+use Sikessem\Values\Types\NumericType;
+use Sikessem\Values\Types\ScalarType;
 
 beforeEach(function () {
     $this->numeric = Conversion::toNumeric('84.21');

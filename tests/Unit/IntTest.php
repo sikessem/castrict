@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\Types\IntType;
-use Sikessem\Values\Types\NumberType;
 use Sikessem\Values\Conversion;
 use Sikessem\Values\IntValue;
+use Sikessem\Values\Types\IntType;
+use Sikessem\Values\Types\NumberType;
 
 beforeEach(function () {
     $this->int = Conversion::toInt(42);

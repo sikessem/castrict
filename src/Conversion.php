@@ -15,9 +15,7 @@ use Sikessem\Values\Types\StringType;
 
 class Conversion
 {
-    public function __construct(protected mixed $value)
-    {
-    }
+    public function __construct(protected mixed $value) {}
 
     public static function from(mixed $value): self
     {
