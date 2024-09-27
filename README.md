@@ -47,6 +47,10 @@
 
 Objects with strict types to manage PHP variables and values.
 
+> [!WARNING]
+> This package is no longer maintained.
+Please use [sikessem/core](https://github.com/sikessem/core) instead.
+
 ## 🔖 Contents
 
 - [PHP Value Objects](#php-value-objects)
