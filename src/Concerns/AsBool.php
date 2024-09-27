@@ -10,6 +10,15 @@ trait AsBool
 {
     use AsScalar;
 
+    public function __invoke(mixed $value = null): bool
+    {
+        if ($value !== null) {
+            return static::of($value)->get();
+        }
+
+        return $this->get();
+    }
+
     abstract public function get(): bool;
 
     /**
@@ -33,15 +42,6 @@ trait AsBool
             'Value "%s" is not a boolean.',
             get_debug_type($value),
         ));
-    }
-
-    public function __invoke(mixed $value = null): bool
-    {
-        if ($value !== null) {
-            return static::of($value)->get();
-        }
-
-        return $this->get();
     }
 
     public function isTrue(): bool

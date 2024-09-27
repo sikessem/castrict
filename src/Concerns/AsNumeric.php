@@ -10,6 +10,15 @@ trait AsNumeric
 {
     use AsScalar;
 
+    public function __invoke(mixed $value = null): int|float|string
+    {
+        if ($value !== null) {
+            return static::of($value)->get();
+        }
+
+        return $this->get();
+    }
+
     abstract public function get(): int|float|string;
 
     /**
@@ -33,14 +42,5 @@ trait AsNumeric
             'Value "%s" is not numeric.',
             get_debug_type($value),
         ));
-    }
-
-    public function __invoke(mixed $value = null): int|float|string
-    {
-        if ($value !== null) {
-            return static::of($value)->get();
-        }
-
-        return $this->get();
     }
 }

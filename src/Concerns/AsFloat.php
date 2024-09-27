@@ -10,6 +10,15 @@ trait AsFloat
 {
     use AsNumber;
 
+    public function __invoke(mixed $value = null): float
+    {
+        if ($value !== null) {
+            return static::of($value)->get();
+        }
+
+        return $this->get();
+    }
+
     abstract public function get(): float;
 
     /**
@@ -33,14 +42,5 @@ trait AsFloat
             'Value "%s" is not a float.',
             get_debug_type($value),
         ));
-    }
-
-    public function __invoke(mixed $value = null): float
-    {
-        if ($value !== null) {
-            return static::of($value)->get();
-        }
-
-        return $this->get();
     }
 }

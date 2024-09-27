@@ -8,6 +8,15 @@ use Sikessem\Values\Types\MixedType;
 
 trait AsMixed
 {
+    public function __invoke(mixed $value = null): mixed
+    {
+        if ($value !== null) {
+            static::of($value)->get();
+        }
+
+        return $this->get();
+    }
+
     abstract public function get(): mixed;
 
     public static function of(mixed $value): self
@@ -30,14 +39,5 @@ trait AsMixed
     public function to(string $type): MixedType
     {
         return $type::of($this->get());
-    }
-
-    public function __invoke(mixed $value = null): mixed
-    {
-        if ($value !== null) {
-            static::of($value)->get();
-        }
-
-        return $this->get();
     }
 }

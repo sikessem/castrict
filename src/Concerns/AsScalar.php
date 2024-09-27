@@ -13,7 +13,16 @@ trait AsScalar
     public function __toString(): string
     {
         /** @psalm-suppress RedundantCast */
-        return (string) $this->get();
+        return $this->get();
+    }
+
+    public function __invoke(mixed $value = null): bool|int|float|string
+    {
+        if ($value !== null) {
+            return static::of($value)->get();
+        }
+
+        return $this->get();
     }
 
     abstract public function get(): bool|int|float|string;
@@ -40,14 +49,5 @@ trait AsScalar
             'Value "%s" is not a scalar.',
             get_debug_type($value),
         ));
-    }
-
-    public function __invoke(mixed $value = null): bool|int|float|string
-    {
-        if ($value !== null) {
-            return static::of($value)->get();
-        }
-
-        return $this->get();
     }
 }
