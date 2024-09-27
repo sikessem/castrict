@@ -23,4 +23,6 @@ interface BoolType extends ScalarType
     public static function truthify(mixed $value): self;
 
     public static function falsify(mixed $value): self;
+
+    public function __invoke(mixed $value = null): bool;
 }

@@ -34,4 +34,13 @@ trait AsNumeric
             get_debug_type($value),
         ));
     }
+
+    public function __invoke(mixed $value = null): int|float|string
+    {
+        if ($value !== null) {
+            return static::of($value)->get();
+        }
+
+        return $this->get();
+    }
 }

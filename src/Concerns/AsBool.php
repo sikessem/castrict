@@ -35,6 +35,15 @@ trait AsBool
         ));
     }
 
+    public function __invoke(mixed $value = null): bool
+    {
+        if ($value !== null) {
+            return static::of($value)->get();
+        }
+
+        return $this->get();
+    }
+
     public function isTrue(): bool
     {
         return $this->get();

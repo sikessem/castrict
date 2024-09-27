@@ -7,4 +7,6 @@ namespace Sikessem\Values\Types;
 interface NumericType extends ScalarType
 {
     public function get(): int|float|string;
+
+    public function __invoke(mixed $value = null): int|float|string;
 }
