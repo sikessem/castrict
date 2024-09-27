@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\Conversion;
+use Sikessem\Values\Cast;
 use Sikessem\Values\NumberValue;
 use Sikessem\Values\Types\NumberType;
 use Sikessem\Values\Types\NumericType;
 
 beforeEach(function () {
-    $this->number = Conversion::toNumber(84.21);
+    $this->number = Cast::toNumber(84.21);
 });
 
 it('should be instantiable', function () {

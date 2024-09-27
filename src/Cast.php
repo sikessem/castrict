@@ -13,7 +13,7 @@ use Sikessem\Values\Types\NumericType;
 use Sikessem\Values\Types\ScalarType;
 use Sikessem\Values\Types\StringType;
 
-class Conversion
+class Cast
 {
     public function __construct(protected mixed $value) {}
 

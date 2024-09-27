@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\Conversion;
+use Sikessem\Values\Cast;
 use Sikessem\Values\StringValue;
 use Sikessem\Values\Types\ScalarType;
 use Sikessem\Values\Types\StringType;
 
 beforeEach(function () {
-    $this->string = Conversion::toString('Hello World');
+    $this->string = Cast::toString('Hello World');
 });
 
 it('should be instantiable', function () {

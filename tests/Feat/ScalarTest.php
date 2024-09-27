@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\Conversion;
+use Sikessem\Values\Cast;
 use Sikessem\Values\ScalarValue;
 use Sikessem\Values\Types\MixedType;
 use Sikessem\Values\Types\ScalarType;
 
 beforeEach(function () {
-    $this->scalar = Conversion::toScalar('Hello World');
+    $this->scalar = Cast::toScalar('Hello World');
 });
 
 it('should be instantiable', function () {

@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 use Sikessem\Values\BoolValue;
-use Sikessem\Values\Conversion;
+use Sikessem\Values\Cast;
 use Sikessem\Values\Types\BoolType;
 use Sikessem\Values\Types\ScalarType;
 
 beforeEach(function () {
-    $this->bool = Conversion::toBool(true);
+    $this->bool = Cast::toBool(true);
 });
 
 it('should be instantiable', function () {
