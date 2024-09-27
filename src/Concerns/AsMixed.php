@@ -11,7 +11,7 @@ trait AsMixed
     public function __invoke(mixed $value = null): mixed
     {
         if ($value !== null) {
-            static::of($value)->get();
+            return static::of($value)->get();
         }
 
         return $this->get();

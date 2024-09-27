@@ -13,7 +13,7 @@ trait AsScalar
     public function __toString(): string
     {
         /** @psalm-suppress RedundantCast */
-        return $this->get();
+        return (string) $this->get();
     }
 
     public function __invoke(mixed $value = null): bool|int|float|string
