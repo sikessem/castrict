@@ -1,5 +1,5 @@
 {
-    "type": "project",
+    "type": "library",
     "name": "sikessem/values",
     "description": "Objects with strict types to manage PHP variables and values.",
     "homepage": "https://packagist.com/packages/sikessem/values",
