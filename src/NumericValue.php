@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Sikessem\Values;
 
 use Sikessem\Values\Concerns\AsNumeric;
-use Sikessem\Values\Contracts\NumericType;
+use Sikessem\Values\Types\NumericType;
 
 class NumericValue implements NumericType
 {

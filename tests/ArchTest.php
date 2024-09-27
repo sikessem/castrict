@@ -23,10 +23,10 @@ test('base classes')
     ->toHavePrefix('Base')
     ->toHaveConstructor();
 
-test('contracts')
-    ->expect('Sikessem\Values\Contracts')
+test('types')
+    ->expect('Sikessem\Values\Types')
     ->interfaces()
-    ->toOnlyBeUsedIn('Sikessem\Values', 'Sikessem\Values\Contracts');
+    ->toOnlyBeUsedIn('Sikessem\Values', 'Sikessem\Values\Types');
 
 test('concerns')
     ->expect('Sikessem\Values\Concerns')

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Sikessem\Values;
 
 use Sikessem\Values\Concerns\AsFloat;
-use Sikessem\Values\Contracts\FloatType;
+use Sikessem\Values\Types\FloatType;
 
 class FloatValue implements FloatType
 {

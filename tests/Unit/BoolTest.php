@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use Sikessem\Values\BoolValue;
-use Sikessem\Values\Contracts\BoolType;
-use Sikessem\Values\Contracts\ScalarType;
+use Sikessem\Values\Types\BoolType;
+use Sikessem\Values\Types\ScalarType;
 use Sikessem\Values\Conversion;
 
 beforeEach(function () {

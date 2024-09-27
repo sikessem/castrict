@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Sikessem\Values;
 
-use Sikessem\Values\Contracts\BoolType;
-use Sikessem\Values\Contracts\FloatType;
-use Sikessem\Values\Contracts\IntType;
-use Sikessem\Values\Contracts\MixedType;
-use Sikessem\Values\Contracts\NumberType;
-use Sikessem\Values\Contracts\NumericType;
-use Sikessem\Values\Contracts\ScalarType;
-use Sikessem\Values\Contracts\StringType;
+use Sikessem\Values\Types\BoolType;
+use Sikessem\Values\Types\FloatType;
+use Sikessem\Values\Types\IntType;
+use Sikessem\Values\Types\MixedType;
+use Sikessem\Values\Types\NumberType;
+use Sikessem\Values\Types\NumericType;
+use Sikessem\Values\Types\ScalarType;
+use Sikessem\Values\Types\StringType;
 
 class Conversion
 {

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Sikessem\Values;
 
 use Sikessem\Values\Concerns\AsInt;
-use Sikessem\Values\Contracts\IntType;
+use Sikessem\Values\Types\IntType;
 
 class IntValue implements IntType
 {

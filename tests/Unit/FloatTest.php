@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\Contracts\FloatType;
-use Sikessem\Values\Contracts\NumberType;
+use Sikessem\Values\Types\FloatType;
+use Sikessem\Values\Types\NumberType;
 use Sikessem\Values\Conversion;
 use Sikessem\Values\FloatValue;
 

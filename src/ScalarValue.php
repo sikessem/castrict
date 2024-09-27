@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Sikessem\Values;
 
 use Sikessem\Values\Concerns\AsScalar;
-use Sikessem\Values\Contracts\ScalarType;
+use Sikessem\Values\Types\ScalarType;
 
 class ScalarValue implements ScalarType
 {

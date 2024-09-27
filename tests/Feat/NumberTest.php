@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Sikessem\Values\Contracts\NumberType;
-use Sikessem\Values\Contracts\NumericType;
+use Sikessem\Values\Types\NumberType;
+use Sikessem\Values\Types\NumericType;
 use Sikessem\Values\Conversion;
 use Sikessem\Values\NumberValue;
 

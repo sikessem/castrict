@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Sikessem\Values\Concerns;
 
-use Sikessem\Values\Contracts\NumberType;
+use Sikessem\Values\Types\NumberType;
 
 trait AsInt
 {

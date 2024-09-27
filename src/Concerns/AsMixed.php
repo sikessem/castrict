@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Sikessem\Values\Concerns;
 
-use Sikessem\Values\Contracts\MixedType;
+use Sikessem\Values\Types\MixedType;
 
 trait AsMixed
 {

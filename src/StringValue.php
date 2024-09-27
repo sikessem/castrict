@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Sikessem\Values;
 
 use Sikessem\Values\Concerns\AsString;
-use Sikessem\Values\Contracts\StringType;
+use Sikessem\Values\Types\StringType;
 
 class StringValue implements StringType
 {

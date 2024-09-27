@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Sikessem\Values;
 
 use Sikessem\Values\Concerns\AsBool;
-use Sikessem\Values\Contracts\BoolType;
+use Sikessem\Values\Types\BoolType;
 
 class BoolValue implements BoolType
 {

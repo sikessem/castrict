@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Sikessem\Values\Contracts;
+namespace Sikessem\Values\Types;
 
 interface NumericType extends ScalarType
 {
