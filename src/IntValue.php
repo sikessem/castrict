@@ -11,10 +11,7 @@ class IntValue implements IntType
 {
     use AsInt;
 
-    public function __construct(protected int $value)
-    {
-        $this->value = $value;
-    }
+    public function __construct(protected int $value) {}
 
     public function get(): int
     {

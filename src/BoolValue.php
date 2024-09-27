@@ -11,10 +11,7 @@ class BoolValue implements BoolType
 {
     use AsBool;
 
-    public function __construct(protected bool $value)
-    {
-        $this->value = $value;
-    }
+    public function __construct(protected bool $value) {}
 
     public function get(): bool
     {

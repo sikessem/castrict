@@ -11,10 +11,7 @@ class NumericValue implements NumericType
 {
     use AsNumeric;
 
-    public function __construct(protected int|float|string $value)
-    {
-        $this->value = $value;
-    }
+    public function __construct(protected int|float|string $value) {}
 
     public function get(): int|float|string
     {

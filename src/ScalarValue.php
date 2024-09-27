@@ -11,10 +11,7 @@ class ScalarValue implements ScalarType
 {
     use AsScalar;
 
-    public function __construct(protected bool|int|float|string $value)
-    {
-        $this->value = $value;
-    }
+    public function __construct(protected bool|int|float|string $value) {}
 
     public function get(): bool|int|float|string
     {

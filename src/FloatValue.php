@@ -11,10 +11,7 @@ class FloatValue implements FloatType
 {
     use AsFloat;
 
-    public function __construct(protected float $value)
-    {
-        $this->value = $value;
-    }
+    public function __construct(protected float $value) {}
 
     public function get(): float
     {

@@ -11,10 +11,7 @@ class NumberValue implements NumberType
 {
     use AsNumber;
 
-    public function __construct(protected int|float $value)
-    {
-        $this->value = $value;
-    }
+    public function __construct(protected int|float $value) {}
 
     public function get(): int|float
     {

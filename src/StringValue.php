@@ -11,10 +11,7 @@ class StringValue implements StringType
 {
     use AsString;
 
-    public function __construct(protected string $value)
-    {
-        $this->value = $value;
-    }
+    public function __construct(protected string $value) {}
 
     public function get(): string
     {
